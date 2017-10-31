@@ -1,7 +1,7 @@
+//Pedir a usuario que ingrese una frase y guardar en variable "phrase"
+var phrase = prompt("Escribe una frase que quieras cifrar");
 
 function cipher (phrase)                                                       {
-    //Pedir a usuario que ingrese una frase y guardar en variable "phrase"                                                                      {
-	phrase = prompt("Escribe una frase que quieras cifrar");
 
 	//Verificar que "phrase" no sea un espacio vacio, si es así mandar alert que indique "frase invalida"
 	if(phrase ==="")  					                  	{
@@ -46,8 +46,7 @@ function cipher (phrase)                                                       {
 	}
 
 	//Guardar los nuevos indices cifrados en variable "cipheredCodesAll"
-	//Crear funcion llamada "cipher" para transformar nuevos indices en caracteres cifrados con el método String.fromCharCode()
-
+	//Transformar nuevos indices en caracteres cifrados con el método String.fromCharCode()
 	var newPhrase = [];
 
 	for (var k = 0; k < cipheredCodesAll.length; k++) 					{
@@ -57,9 +56,20 @@ function cipher (phrase)                                                       {
 
 	//Convertir "newPhrase" cifrada en String sin comas
 	newPhrase = newPhrase.join(""); 
-	return(document.write("Tu frase cifrada es " + newPhrase));
+	return("Tu frase Cifrada es " + newPhrase);
 }
 
-cipher();
+function decipher (newPhrase) {
+
+	return("Tu frase Original fue " + phrase);
+}
+
+//Llamar funciones
+
+document.write(cipher(phrase) + "<br>");
+document.write(decipher(phrase));
+
+
+
 
 	
